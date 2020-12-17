@@ -21,7 +21,7 @@ const OurTeam = () => (
                 <div className="OurTeam__row row">
                     <div className="OurTeam__team">
                         <Integrant
-                            integrateClass = "OurTeam__integrate col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2"
+                            integrateClass = "OurTeam__integrate col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
                             name = "Julian Carelli"
                             img = {persona}
                             title= "Julian Carelli, integrante de AIRhitect"
@@ -29,17 +29,9 @@ const OurTeam = () => (
                             text ="Julian ocupa el rol de programador en AIRhitect y se caracteriza por un ser una persona disciplinada, honesta, y muy comprometida con su trabajo, maneja herramientas tanto de front end como de back end y se encarga de darle el soporte necesario brindando actualizaciones para nuestros clientes."
                         />
 
-                        <Integrant
-                            integrateClass = "OurTeam__integrate col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2"
-                            name = "Matias Linari"
-                            title= "Matias Linari, integrante de AIRhitect"
-                            img = {persona}
-                            profession = "Administrador"
-                            text ="Matias ocupa el rol de administrador en AIRhitect, se caracteriza por ser una persona atenta y profesional en su ámbito, su rol en la empresa es administrar la comunicación con los clientes y escuchando las peticiones que tienen hacia la empresa."
-                        />
 
                         <Integrant
-                            integrateClass = "OurTeam__integrate col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2"
+                            integrateClass = "OurTeam__integrate col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
                             name = "Esteban Súarez"
                             title= "Esteban Súarez, integrante de AIRhitect"
                             img = {persona}
@@ -48,7 +40,16 @@ const OurTeam = () => (
                         />
 
                         <Integrant
-                            integrateClass = "OurTeam__integrate col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2"
+                            integrateClass = "OurTeam__integrate col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
+                            name = "Matias Linari"
+                            title= "Matias Linari, integrante de AIRhitect"
+                            img = {persona}
+                            profession = "Administrador"
+                            text ="Matias ocupa el rol de administrador en AIRhitect, se caracteriza por ser una persona atenta y profesional en su ámbito, su rol en la empresa es administrar la comunicación con los clientes y escuchando las peticiones que tienen hacia la empresa."
+                        />
+
+                        <Integrant
+                            integrateClass = "OurTeam__integrate col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
                             name = "Nicolas Torres"
                             img = {persona}
                             title= "Nicolas Torres, integrante de AIRhitect"
@@ -57,7 +58,7 @@ const OurTeam = () => (
                         />
 
                         <Integrant
-                            integrateClass = "OurTeam__integrate col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2"
+                            integrateClass = "OurTeam__integrate col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
                             name = "Guido Gasalla"
                             title= "Guido Gasalla, integrante de AIRhitect"
                             img = {persona}

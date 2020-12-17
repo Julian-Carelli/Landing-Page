@@ -64,7 +64,7 @@ padding-top:45px;
     align-items:center;
     width:100%;
     padding: 45px;
-    @media screen and (max-width:768px) and (min-width:0px){
+    @media screen and (max-width:767px) and (min-width:0px){
         flex-direction:column;
         text-align:initial;
         padding:0px;
@@ -74,8 +74,8 @@ padding-top:45px;
 .Contact__information {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    padding: 0px 20px;
+    width:50%;
+    padding:0px 20px;
     @media screen and (max-width:768px) and (min-width:0px){
         width:100%;
         padding:30px 20px;

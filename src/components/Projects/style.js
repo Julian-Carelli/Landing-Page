@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 import fondo2 from '../../assets/images/fondo2.webp'
-import fondo3 from '../../assets/images/fondo3.webp'
 import fondo4 from '../../assets/images/fondo4.webp'
+import slider from '../Figure/slider'
 
 const ProjectsStyled = styled.section `
 
@@ -21,6 +21,11 @@ padding-top:45px;
     }
 }
 
+.Projects__row {
+    position:relative;
+}
+
+
 .Projects__img-1 {
     padding:45px 15px;
     background-image: url(${fondo2});
@@ -29,9 +34,9 @@ padding-top:45px;
     -o-background-size: cover;
     background-size: cover;
     height:100vh;
-    @media screen and (max-width:768px) and (min-width:0px){
+    @media screen and (max-width:767px) and (min-width:0px){
         padding:0px;
-        background-image: null;
+        background-image: none;
         height:auto;
     }
 }
@@ -76,7 +81,7 @@ padding-top:45px;
 .Projects__cards {
     padding: 0px 0px;
     height:100vh;
-    @media screen and (max-width:768px) and (min-width:0px){
+    @media screen and (max-width:767px) and (min-width:0px){
         height:700px;
     }
 }
@@ -136,16 +141,28 @@ padding-top:45px;
 }
 
 .Projects__image {
-    background-image: url(${fondo3});
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     height:80%;
+    overflow:hidden;
     @media screen and (max-width:768px) and (min-width:0px){
+        background-image:url(${fondo2});
         position:relative;
         height:100%
     }
+}
+
+.Projects__figure {
+    display:flex;
+    position:relative;
+    width:100%;
+    animation:20s ${slider} infinite;
+}
+
+.Projects__background {
+    float:left;
+    width:100%;
+    height:100vh;
+    object-fit:cover;
+    flex-shrink: 0;
 }
 
 .Projects__img-2 {
@@ -156,7 +173,7 @@ padding-top:45px;
     -o-background-size: cover;
     background-size: cover;
     height:100vh;
-    @media screen and (max-width:768px) and (min-width:0px){
+    @media screen and (max-width:767px) and (min-width:0px){
         display:none;   
     }
 }

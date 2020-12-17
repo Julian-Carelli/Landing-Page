@@ -15,7 +15,7 @@ padding-top:45px;
     @media screen and (max-width:768px) and (min-width:0px){
         height:100%;
     }
-    @media screen and (max-width:1200px) and (min-width:768px){
+    @media screen and (max-width:1300px) and (min-width:768px){
         height:100%;
         padding-top:45px;
 

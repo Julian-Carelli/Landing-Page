@@ -30,7 +30,7 @@ height:100%;
     width:90%;
     margin:auto;
     padding: 90px 0px;
-    @media screen and (max-width:768px) and (min-width:0px){
+    @media screen and (max-width:767px) and (min-width:0px){
         flex-direction:column;
         width:100%;
     }
@@ -38,6 +38,7 @@ height:100%;
 }
 
 .OurTeam__integrate {
+    padding:45px 30px;
     @media screen and (max-width:768px) and (min-width:0px){
         padding:40px 0px;
     }

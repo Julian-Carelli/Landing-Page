@@ -1,8 +1,14 @@
 import React from 'react'
 
 import FilterSection from '../FilterSection/index';
+import Figure from '../Figure/index'
 
 import ProjectsStyled from './style';
+import fondo1 from '../../assets/images/fondo1.webp'
+import fondo2 from '../../assets/images/fondo2.webp'
+import fondo3 from '../../assets/images/fondo3.webp'
+
+
 
 const Projects = () => (
 
@@ -21,17 +27,25 @@ const Projects = () => (
                     <div className="Projects__cards col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4"> 
 
                         <div className="Projects__image">
-
+                            <Figure
+                                classFigure="Projects__figure"
+                                classImg="Projects__background"
+                                img1={fondo3}
+                                img2={fondo2}
+                                img3={fondo1}
+                                img4={fondo3}
+                                img5={fondo2}        
+                            />
                         </div>
                         <div className="Projects__card">
                             <div className="Projects__name">
                                 <h2 className="Projects__title">
-                                    Nombre del proyecto
+                                    Proyectos hechos por <strong>AIRhitect</strong>
                                 </h2>
                             </div>
                             <div className="Projects__info">
                                 <p className="Projects__text">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Nos encargamos de hacer realidad tus proyectos.
                                 </p>
                             </div>
                         </div>
