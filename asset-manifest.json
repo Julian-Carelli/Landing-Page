@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Landing-Page/static/css/main.6c52be86.chunk.css",
+    "main.css": "/Landing-Page/static/css/main.d73d0923.chunk.css",
     "main.js": "/Landing-Page/static/js/main.fd1f2f81.chunk.js",
     "main.js.map": "/Landing-Page/static/js/main.fd1f2f81.chunk.js.map",
     "runtime-main.js": "/Landing-Page/static/js/runtime-main.afbde3ba.js",
@@ -10,7 +10,7 @@
     "static/js/2.97d8994e.chunk.js.map": "/Landing-Page/static/js/2.97d8994e.chunk.js.map",
     "index.html": "/Landing-Page/index.html",
     "static/css/2.90295050.chunk.css.map": "/Landing-Page/static/css/2.90295050.chunk.css.map",
-    "static/css/main.6c52be86.chunk.css.map": "/Landing-Page/static/css/main.6c52be86.chunk.css.map",
+    "static/css/main.d73d0923.chunk.css.map": "/Landing-Page/static/css/main.d73d0923.chunk.css.map",
     "static/js/2.97d8994e.chunk.js.LICENSE.txt": "/Landing-Page/static/js/2.97d8994e.chunk.js.LICENSE.txt",
     "static/media/all.css": "/Landing-Page/static/media/fa-solid-900.46fdbd2d.woff",
     "static/media/fondo1.8bcb5119.png": "/Landing-Page/static/media/fondo1.8bcb5119.png",
@@ -23,7 +23,7 @@
     "static/js/runtime-main.afbde3ba.js",
     "static/css/2.90295050.chunk.css",
     "static/js/2.97d8994e.chunk.js",
-    "static/css/main.6c52be86.chunk.css",
+    "static/css/main.d73d0923.chunk.css",
     "static/js/main.fd1f2f81.chunk.js"
   ]
 }
