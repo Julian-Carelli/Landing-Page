@@ -2,15 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './global.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import LandingPage from './containers/LandingPage'
+import '@fortawesome/fontawesome-free/css/all.css'
+import App from './routes/App'
+import logo from './assets/images/logo.png'
+import logoWhite from './assets/images/logoWhite.png'
+
+
+const showScrollY = () => {
+
+  let scrollY = window.scrollY
+  let image = document.getElementById("image")
+
+  if(scrollY > 3925){
+    image.src=`${logoWhite}`;
+  }
+  else{
+    image.src=`${logo}`;
+  }
+}
+
+window.addEventListener("scroll", showScrollY);
 
 ReactDOM.render(
   <React.StrictMode>
-    <LandingPage />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
