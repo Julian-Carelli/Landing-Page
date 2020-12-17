@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import fondo1 from '../../assets/images/fondo1.png';
+import fondo1 from '../../assets/images/fondo1.webp';
 
 
-const PresentationStyled = styled.section `
+const PresentationStyled = styled.header `
 
 
 .Presentation {

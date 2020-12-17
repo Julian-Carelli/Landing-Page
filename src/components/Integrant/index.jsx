@@ -15,11 +15,11 @@ const Integrant = ({integrateClass, img, title, name, profession, text}) => (
                 {profession}
             </h3>
         </div>
-        <div className="OurTeam__info">
+        <article className="OurTeam__info">
             <p className="OurTeam__text">
                 {text}
             </p>
-        </div>
+        </article>
     </div>
 )
 

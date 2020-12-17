@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import fondo5 from '../../assets/images/fondo5.png'
+import fondo5 from '../../assets/images/fondo5.webp'
 
 
 const ContactStyled = styled.section `

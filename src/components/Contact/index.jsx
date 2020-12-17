@@ -5,7 +5,7 @@ import Modal from '../Modal/index';
 
 import ContactStyled from './style';
 
-const Contact = ({handleOnSubmit, handleOnChange, closeModal, status}) => (
+const Contact = ({handleOnSubmit, closeModal, status}) => (
 
     <>
         <ContactStyled>
@@ -66,14 +66,11 @@ const Contact = ({handleOnSubmit, handleOnChange, closeModal, status}) => (
                                     </div>
                                     <div className="Contact-hiring__info">
                                         <p className="Contact-hiring__text">
-                                            Estamos en la busqueda de nuevos talentos para nuestro equipo!
-                                            Si piensas que tu eres la persona correcta para AIRhitect mandanos
-                                            un email con tu CV y portafolio. No te olvides de escribir acerca de ti!
-
+                                            Estamos en la búsqueda de nuevos talentos para nuestro equipo! Si piensas que tu eres la persona correcta para AIRhitect mandanos un email con tu CV y portafolio. No te olvides de escribir acerca de ti!
                                         </p>
-                                        <p className="Contact-hiring__span">
+                                        <span className="Contact-hiring__span">
                                             job@airhitect.com
-                                        </p>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -94,16 +91,16 @@ const Contact = ({handleOnSubmit, handleOnChange, closeModal, status}) => (
                         
                         <form onSubmit={handleOnSubmit} className="Contact__form">
                             <div className="Contact__input-name">
-                                <input onChange={handleOnChange} id="name" type="text" className="Contact__input form-control" placeholder="Name"></input>
+                                <input id="name" type="text" className="Contact__input form-control" placeholder="Name"></input>
                             </div>
                             <div className="Contact__input-email">
-                                <input onChange={handleOnChange} id="email" type="email" className="Contact__input form-control" placeholder="E-mail"></input>
+                                <input id="email" type="email" className="Contact__input form-control" placeholder="E-mail"></input>
                             </div>
                             <div className="Contact__input-subject">
-                                <input onChange={handleOnChange} id="subject" type="text" className="Contact__input form-control" placeholder="Subject"></input>
+                                <input id="subject" type="text" className="Contact__input form-control" placeholder="Subject"></input>
                             </div>
                             <div className="Contact__input-textarea">
-                                <textarea onChange={handleOnChange} id="message" type="text" className="Contact__input form-control" placeholder="Message"></textarea>
+                                <textarea id="message" type="text" className="Contact__input form-control" placeholder="Message"></textarea>
                             </div>
                             <div className="Contact__input-button">
                                 <button className="Contact__button  btn">Send message</button>

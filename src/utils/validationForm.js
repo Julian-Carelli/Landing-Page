@@ -1,17 +1,12 @@
 import validationElement from './validationElement'
 
-const validationForm = e => {
+//Una funcion que sirve para validar el formulario, pasandole parametros que puedan ser evaluados gracias a otra funcion, si es valido el proceso, se retorna un true y sino un false (validationForm)
 
-    e.preventDefault()
-
-    const name = document.getElementById('name').value
-    const email = document.getElementById('email').value
-    const subject = document.getElementById('subject').value
-    const message = document.getElementById('message').value
+const validationForm = (name, email, subject, message) => {
 
 
     if(validationElement(name) && validationElement(email) && validationElement(subject) && validationElement(message)){
-        console.log('ganamos')
+        return true
     }
     else {
         return false
@@ -19,4 +14,4 @@ const validationForm = e => {
     
 }
 
-document.getElementById('form').addEventListener('submit', validationForm);
+export default validationForm

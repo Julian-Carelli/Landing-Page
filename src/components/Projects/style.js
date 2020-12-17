@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import fondo2 from '../../assets/images/fondo2.png'
-import fondo3 from '../../assets/images/fondo3.png'
-import fondo4 from '../../assets/images/fondo4.png'
+import fondo2 from '../../assets/images/fondo2.webp'
+import fondo3 from '../../assets/images/fondo3.webp'
+import fondo4 from '../../assets/images/fondo4.webp'
 
 const ProjectsStyled = styled.section `
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const MenuStyled = styled.div `
+const MenuStyled = styled.section `
 
 
 .Menu {
@@ -18,8 +18,15 @@ const MenuStyled = styled.div `
 .Menu__row {
     display:flex;
     justify-content:center;
-    align-items:center;
-    margin:auto;
+    align-items:baseline;
+    padding:45px;
+    @media screen and (max-width:991px) and (min-width:0px){
+        padding:0px;
+        margin:auto;
+    }
+    @media screen and (max-width:1171px) and (min-width:991px){
+        padding:0px;
+    }
 }
 
 .Menu__contain {

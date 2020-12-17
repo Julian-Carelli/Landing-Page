@@ -11,11 +11,11 @@ const Menu = () => (
             <div className="Menu__row row">
 
                 <Border 
-                    divClass="Menu__contain col-2 col-sm-2 col-md-6 col-lg-4 col-xl-4"
+                    divClass="Menu__contain col-2 col-sm-2 col-md-6 col-lg-1 col-xl-2"
                     borderClass="Menu__border"
                 />
 
-                <div className="Menu__principal col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                <div className="Menu__principal col-12 col-sm-12 col-md-12 col-lg-7 col-xl-8">
                     <div className="Menu__info">
                         <h1 className="Menu__title">
                             diseñamos tu futuro
@@ -28,7 +28,7 @@ const Menu = () => (
                 </div>
 
                 <Border 
-                    divClass="Menu__contain col-2 col-sm-2 col-md-6 col-lg-4 col-xl-4"
+                    divClass="Menu__contain col-2 col-sm-2 col-md-6 col-lg-1 col-xl-2"
                     borderClass="Menu__border"
                 />
 
