@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Border = ({divClass, borderClass}) => (
-    <div className={divClass}>
+const Border = ({divId, divClass, borderClass}) => (
+    <div id={divId} className={divClass}>
         <div className={borderClass}></div>
     </div>
 )

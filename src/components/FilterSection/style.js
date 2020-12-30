@@ -10,7 +10,7 @@ const FilterSectionStyled = styled.div `
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.semi_bold};
     font-size: ${props => props.theme.fontSizeTitle.medium};
-    color: #302940;
+    color: ${props => props.theme.colorProject.violetHard};
 }
 
 `;

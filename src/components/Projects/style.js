@@ -4,21 +4,20 @@ import fondo2 from '../../assets/images/fondo2.webp'
 import fondo4 from '../../assets/images/fondo4.webp'
 import slider from '../Figure/slider'
 
-const ProjectsStyled = styled.section `
+const ProjectsStyled = styled.section.attrs({
+    className:'Projects container-fluid',
+    id:'projects'
+})`
 
 padding-top:45px;
-
-
-.Projects {
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    text-align:center;
-    height:100vh;
-    padding:0px 15px;
-    @media screen and (max-width:480px) and (min-width:0px){
-        height:100%;
-    }
+display:flex;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+height:100vh;
+padding:0px 15px;
+@media screen and (max-width:480px) and (min-width:0px){
+    height:100%;
 }
 
 .Projects__row {
@@ -34,10 +33,8 @@ padding-top:45px;
     -o-background-size: cover;
     background-size: cover;
     height:100vh;
-    @media screen and (max-width:767px) and (min-width:0px){
-        padding:0px;
-        background-image: none;
-        height:auto;
+    @media screen and (max-width:1199px) and (min-width:0px){
+        display:none;
     }
 }
 
@@ -65,7 +62,7 @@ padding-top:45px;
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.bold};
     font-size: ${props => props.theme.fontSizeTitle.medium};
-    color: #302940;
+    color: ${props => props.theme.colorProject.violetHard};
     @media screen and (max-width:480px) and (min-width:0px){
         font-size: ${props => props.theme.fontSizeText.medium};
     }
@@ -75,14 +72,14 @@ padding-top:45px;
 }
 
 .Projects__section:hover {
-    color:#443d5b;
+    color:${props => props.theme.colorProject.violetSoft};
 }
 
 .Projects__cards {
-    padding: 0px 0px;
+    padding: 0px;
     height:100vh;
     @media screen and (max-width:767px) and (min-width:0px){
-        height:700px;
+        height:100%;
     }
 }
 
@@ -90,7 +87,7 @@ padding-top:45px;
     padding:20px;
     text-align:left;
     @media screen and (max-width:768px) and (min-width:0px){
-        background-color:white;
+        background-color:${props => props.theme.colorProject.white};
         width:100%;
         position:absolute;
         bottom:10%;
@@ -113,7 +110,7 @@ padding-top:45px;
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.bold};
     font-size: ${props => props.theme.fontSizeTitle.medium};
-    color: #302940;
+    color:${props => props.theme.colorProject.violetHard};
     @media screen and (max-width:480px) and (min-width:0px){
         font-size: ${props => props.theme.fontSizeText.medium};
     }
@@ -137,17 +134,27 @@ padding-top:45px;
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.regular};
     font-size: ${props => props.theme.fontSizeText.min};
-    color: #302940;
+    color: ${props => props.theme.colorProject.violetHard};
 }
 
 .Projects__image {
     height:80%;
     overflow:hidden;
-    @media screen and (max-width:768px) and (min-width:0px){
+    @media screen and (max-width:1199px) and (min-width:0px){
         background-image:url(${fondo2});
         position:relative;
         height:100%
     }
+}
+
+.Projects__query {
+    display:none;
+    @media screen and (max-width:1199px) and (min-width:0px){
+        display:block;
+        position: absolute;
+        z-index: 8;
+        padding: 45px 30px;
+    } 
 }
 
 .Projects__figure {
@@ -155,6 +162,7 @@ padding-top:45px;
     position:relative;
     width:100%;
     animation:20s ${slider} infinite;
+    margin:0px;
 }
 
 .Projects__background {
@@ -173,7 +181,7 @@ padding-top:45px;
     -o-background-size: cover;
     background-size: cover;
     height:100vh;
-    @media screen and (max-width:767px) and (min-width:0px){
+    @media screen and (max-width:1199px) and (min-width:0px){
         display:none;   
     }
 }

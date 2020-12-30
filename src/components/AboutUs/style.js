@@ -1,27 +1,22 @@
 import styled from 'styled-components'
 
-const AboutUsStyled = styled.section `
+const AboutUsStyled = styled.main.attrs({
+    className:'AboutUs container-fluid',
+    id:'aboutUs'
+}) `
 
-padding-top:45px;
 
-.AboutUs{
-    background-color: #eae6eb;
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    text-align:center;
-    height:100vh;
-    padding:0px 30px;
-    @media screen and (max-width:768px) and (min-width:0px){
-        height:100%;
-    }
-    @media screen and (max-width:1300px) and (min-width:768px){
-        height:100%;
-        padding-top:45px;
-
-    }
-    
+display:flex;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+height:100vh;
+background-color: ${props => props.theme.colorProject.graySoft};
+padding:90px 30px;
+@media screen and (max-width:768px) and (min-width:0px){
+    height:100%;
 }
+
 
 .AboutUs__filter {
     font-size:15px;
@@ -40,7 +35,7 @@ padding-top:45px;
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.bold};
     font-size: ${props => props.theme.fontSizeTitle.medium};
-    color: #302940;
+    color: ${props => props.theme.colorProject.violetHard};
     @media screen and (max-width:480px) and (min-width:0px){
         font-size: ${props => props.theme.fontSizeText.medium};
     }
@@ -53,23 +48,18 @@ padding-top:45px;
 }
 
 .AboutUs__section:hover {
-    color:#443d5b;
+    color:${props => props.theme.colorProject.violetSoft};
 }
 
 .AboutUs__contain {
     padding:20px 0px;
-    width: 100%;
 }
 
 .AboutUs__border {
     height:3px;
-    background-color: #302940;
+    background-color: ${props => props.theme.colorProject.violetHard};
     margin:auto;
     width:15%;
-}
-
-.AboutUs__menu {
-    width:100%;
 }
 
 .AboutUs__presentation {
@@ -99,21 +89,17 @@ padding-top:45px;
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.semi_bold};
     font-size: ${props => props.theme.fontSizeTitle.medium};
-    color: #302940;
-    @media screen and (max-width:480px) and (min-width:0px){
+    color: ${props => props.theme.colorProject.violetHard};
+    @media screen and (max-width:768px) and (min-width:0px){
         font-size: ${props => props.theme.fontSizeText.medium};
     }
-    @media screen and (max-width:768px) and (min-width:480px){
-        font-size: ${props => props.theme.fontSizeTitle.min};
-    }
-    
     
 }
 
 .AboutUs__columns {
     display:flex;
     margin:auto;
-    text-align:justify;
+    text-align:left;
     @media screen and (max-width:768px) and (min-width:0px){
         display:flex;
         flex-direction:column;
@@ -133,7 +119,7 @@ padding-top:45px;
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.medium};
     font-size: ${props => props.theme.fontSizeText.min};
-    color: #443d5b;
+    color: ${props => props.theme.colorProject.violetSoft};
 }
 `;
 

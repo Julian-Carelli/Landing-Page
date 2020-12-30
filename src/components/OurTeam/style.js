@@ -1,24 +1,23 @@
 import styled from 'styled-components'
 
-const OurTeamStyled = styled.section `
+const OurTeamStyled = styled.section.attrs({
+    className:'OurTeam container-fluid',
+    id:'ourTeam'
+}) `
 
 padding-top:45px;
 height:100%;
-@media screen and (max-width:1200px) and (min-width:0px){
-    height:100%;
-}
-
-.OurTeam{
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-}
+padding:90px 15px;
 
 
 .OurTeam__row {
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
     width:100%;
     margin:0px;
     padding-top:45px;
+    
     
 }
 
@@ -51,10 +50,10 @@ height:100%;
     width: 200px;
     max-width:100%;
     @media screen and (max-width:480px) and (min-width:0px){
-        max-width:30%;
+        max-width:25%;
     }
     @media screen and (max-width:768px) and (min-width:480px){
-        max-width:30%;
+        max-width:25%;
     }
     @media screen and (max-width:992px) and (min-width:768px){
         max-width:40%;
@@ -75,7 +74,7 @@ height:100%;
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.bold};
     font-size: ${props => props.theme.fontSizeTitle.medium};
-    color: #302940;
+    color: ${props => props.theme.colorProject.violetHard};
     @media screen and (max-width:480px) and (min-width:0px){
         font-size: ${props => props.theme.fontSizeText.medium};
     }
@@ -85,7 +84,7 @@ height:100%;
 }
 
 .OurTeam__section:hover {
-    color:#443d5b;
+    color:${props => props.theme.colorProject.violetSoft};
 }
 
 .OurTeam__name{
@@ -105,7 +104,7 @@ height:100%;
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.bold};
     font-size: ${props => props.theme.fontSizeTitle.medium};
-    color: #302940;
+    color: ${props => props.theme.colorProject.violetHard};
     @media screen and (max-width:480px) and (min-width:0px){
         font-size: ${props => props.theme.fontSizeText.medium};
     }
@@ -129,7 +128,7 @@ height:100%;
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.regular};
     font-size: ${props => props.theme.fontSizeTitle.medium};
-    color: #302940;
+    color: ${props => props.theme.colorProject.violetHard};
     @media screen and (max-width:480px) and (min-width:0px){
         font-size: ${props => props.theme.fontSizeText.medium};
     }
@@ -151,7 +150,7 @@ height:100%;
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.regular};
     font-size: ${props => props.theme.fontSizeText.min};
-    color: #443d5b;
+    color: ${props => props.theme.colorProject.violetSoft};
 }
 
 

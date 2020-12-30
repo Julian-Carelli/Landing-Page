@@ -5,19 +5,16 @@ import Menu from '../Menu'
 
 import PresentationStyled from './style'
 
-const Presentation = ({handleHamburguer, checkbox}) => (
+const Presentation = ({handleHamburguer, listenForEnter, checkbox}) => (
 
     <PresentationStyled>
-        <div id="presentation" className="Presentation">
-            <>
-            <Navbar
+        <Navbar
             handleHamburguer={handleHamburguer}
+            listenForEnter={listenForEnter}
             checkbox={checkbox}
-            />
+        />
 
-            <Menu></Menu>
-            </>
-        </div>
+        <Menu/>
     </PresentationStyled>
     
 )

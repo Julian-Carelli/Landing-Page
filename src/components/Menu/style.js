@@ -1,28 +1,28 @@
 import styled from 'styled-components'
 
-const MenuStyled = styled.section `
+const MenuStyled = styled.section.attrs({
+    className:'Menu container-fluid'
+})`
 
 
-.Menu {
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    text-align:center;
-    height:100vh;
-    @media screen and (max-width:480px) and (min-width:0px){
-        height:auto;
-        padding:180px 0px;
-    }
+display:flex;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+height:100vh;
+@media screen and (max-width:480px) and (min-width:0px){
+    height:auto;
+    padding:180px 0px;
 }
 
+
 .Menu__row {
-    display:flex;
     justify-content:center;
     align-items:baseline;
     padding:45px;
     @media screen and (max-width:991px) and (min-width:0px){
-        padding:0px;
         margin:auto;
+        padding:0px;
     }
     @media screen and (max-width:1171px) and (min-width:991px){
         padding:0px;
@@ -30,8 +30,7 @@ const MenuStyled = styled.section `
 }
 
 .Menu__contain {
-    background-color: #302940;
-    width:100%;
+    background-color:${props => props.theme.colorProject.violetHard};
     height:3px;
     padding:0px 90px; 
 }
@@ -64,7 +63,7 @@ const MenuStyled = styled.section `
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.bold};
     font-size: ${props => props.theme.fontSizeTitle.max};
-    color: #302940;
+    color: ${props => props.theme.colorProject.violetHard};
     @media screen and (max-width:480px) and (min-width:0px){
         font-size: ${props => props.theme.fontSizeTitle.min};
     }
@@ -80,7 +79,7 @@ const MenuStyled = styled.section `
     font-family: ${props => props.theme.fontFamily.raleway};
     font-weight: ${props => props.theme.fontWeight.medium};
     font-size: ${props => props.theme.fontSizeTitle.min};
-    color: #443d5b;
+    color: ${props => props.theme.colorProject.violetSoft};
     @media screen and (max-width:768px) and (min-width:0px){
         display:none;
     }

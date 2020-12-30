@@ -1,32 +1,26 @@
 import styled from 'styled-components'
 
-const NavbarStyled = styled.nav `
+const NavbarStyled = styled.nav.attrs({
+    className:'Navbar container-fluid'
+}) `
 
-.Navbar {
-    display:flex;
-    justify-content:space-between;
-    height:50px;
-    padding:10px 20px;
-}
+display:flex;
+height:80px;
+padding:10px 20px;
 
 .Navbar__row {
-    display:flex;
     width:100%;
     position:fixed;
     z-index:9; 
 }
 
-.Navbar__menu {
-    width:100%;
-}
-
 .Navbar__principal {
-    width:35%;
     display:flex;
-    justify-content:center;
     align-items:center;
-    background-color:white;
+    justify-content:center;
+    background-color:${props => props.theme.colorProject.white};
     padding:10px;
+    width:35%;
     @media screen and (max-width:768px) and (min-width:0px){
         width:25%;
         padding:5px;
@@ -43,7 +37,7 @@ const NavbarStyled = styled.nav `
     font-family: ${props => props.theme.fontFamily.lato};
     font-weight: ${props => props.theme.fontWeight.regular};
     font-size: ${props => props.theme.fontSizeText.medium};
-    color:#443d5b;
+    color:${props => props.theme.colorProject.violetSoft};
     margin:auto;
     @media screen and (max-width:768px) and (min-width:0px){
         display:none;
@@ -63,7 +57,7 @@ const NavbarStyled = styled.nav `
 }
 
 .Navbar__section {
-    background: white;
+    background: ${props => props.theme.colorProject.white};
     position: absolute;
     top: 100%;
     left: 3%;
@@ -84,17 +78,29 @@ const NavbarStyled = styled.nav `
     padding:20px;
 }
 
+.Navbar__item:hover{
+    background:${props => props.theme.colorProject.graySoft};
+}
+
+.Navbar__item:focus-within {
+    background:${props => props.theme.colorProject.graySoft};
+}
+
 .Navbar__link {
     font-family: ${props => props.theme.fontFamily.lato};
     font-weight: ${props => props.theme.fontWeight.regular};
     font-size: ${props => props.theme.fontSizeText.medium};
-    color:#443d5b;
+    color:${props => props.theme.colorProject.violetSoft};
     text-decoration:none;
+    outline:none;
+    @media screen and (max-width:480px) and (min-width:0px){
+        font-size: ${props => props.theme.fontSizeText.extraMin};
+    }
+    @media screen and (max-width:768px) and (min-width:480px){
+        font-size: ${props => props.theme.fontSizeText.min};
+    }
 }
 
-.Navbar__item:hover {
-    background-color:#eae6eb;
-}
 
 .Navbar__brand {
     text-align:center;
@@ -118,11 +124,17 @@ const NavbarStyled = styled.nav `
 
 .Navbar__span {
     display:flex;
-    justify-content:flex-end;
     align-items:center;
-    width:auto;
     padding:10px;
-    background-color:white;
+    background-color:${props => props.theme.colorProject.white};
+}
+
+.Navbar__span:focus-within {
+    background-color:${props => props.theme.colorProject.graySoft};
+}
+
+.Navbar__span:hover {
+    background-color:${props => props.theme.colorProject.graySoft};
 }
 
 .Navbar__img {
@@ -143,9 +155,11 @@ const NavbarStyled = styled.nav `
     font-family: ${props => props.theme.fontFamily.lato};
     font-weight: ${props => props.theme.fontWeight.regular};
     font-size: ${props => props.theme.fontSizeText.medium};
-    color:#443d5b;
+    color:${props => props.theme.colorProject.violetSoft};
     text-decoration:none;
     padding:0px 10px;
+    outline:none;
+    
 }
 
 `;

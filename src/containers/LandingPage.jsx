@@ -36,6 +36,39 @@ class LandingPage extends Component {
         //Gracias al evento 'click' voy a poder saber la ubicacion exacta del click del usuario y de esa manera activar el metodo showClick(window.addEventListener("click"))
 
         window.addEventListener("click", this.showClick)
+
+        //Gracias al evento 'keyup' puedo definir que cuando se toque cierta tecla, se pueda ejecutar el metodo listenForEsc(document.body.addEventListener("keyup"))
+
+        document.body.addEventListener("keyup", e => this.listenForEsc(e))
+
+        if(this.state.status === 'error'){
+            document.getElementById('text-error').focus()
+        }
+
+        if(this.state.status === 'ok'){
+            document.getElementById('airhitect-text').focus()
+        }
+
+
+    }
+
+    //Gracias a este metodo cuando se toque la tecla enter en el icono de hamburguesa (este icono tiene un evento 'keyup'), se llamara al metodo  handleHamburguer para que pueda abrir la navegacion de la pagina y si se toca la tecla enter en el icono de cerrar(que se encuentra en el modal), se llamara al metodo closeModal que cerrara el modal (listenForEnter) 
+
+    listenForEnter = e => {
+        if(e.keyCode === 13 && e.target.className === 'Navbar__icon hamburguer fas fa-bars'){
+            this.handleHamburguer()
+        }
+        if(e.keyCode === 13 && e.target.className === 'Modal__icon fas fa-times-circle'){
+            this.closeModal()
+        }
+    }
+
+    //Gracias a este metodo cuando se toque la tecla escape, este va a activar otro metodo llamado closeModal que me permitira cerrar el modal(listenForEsc)
+
+    listenForEsc = e => {
+        if(e.keyCode === 27){
+            this.closeModal()
+        }
     }
 
     //Gracias a este metodo cuando el usuario pase cierto rango en scroll "Y", voy a cambiar de imagen en referencia al logo (showScrollY)
@@ -60,6 +93,7 @@ class LandingPage extends Component {
             this.setState({
                 checkbox:'activate'
             })
+
         }
         else {
             this.setState({
@@ -104,6 +138,8 @@ class LandingPage extends Component {
                 status: 'ok'
             })
 
+
+
         }
 
         else {
@@ -136,6 +172,7 @@ class LandingPage extends Component {
             <ThemeProvider theme={theme}>
                 <Presentation
                 handleHamburguer={this.handleHamburguer}
+                listenForEnter={this.listenForEnter}
                 checkbox={this.state.checkbox}
                 />
                 <AboutUs/>
@@ -144,6 +181,7 @@ class LandingPage extends Component {
                 <Contact
                 handleOnSubmit={this.handleOnSubmit}
                 closeModal={this.closeModal}
+                listenForEnter={this.listenForEnter}
                 status={this.state.status}
                 />
             </ThemeProvider>

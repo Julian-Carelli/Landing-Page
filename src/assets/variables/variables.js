@@ -24,22 +24,14 @@ const variables = {
         bold: 700
     },
 
-    fontSizePx: {
-        min: "10px",
-        min_1:"11px",
-        min_2:"12px",
-        medium:"13px",
-        medium_1:"14px",
-        medium_2:"15px",
-        max:"16px",
-    },
-
-    mediaQueries:{
-        phone_min: "320px",
-        phone_max: "480px",
-        tablet:"768px",
-        desktop: "1024px",
+    colorProject: {
+        violetHard: '#302940',
+        violetSoft:'#443d5b',
+        graySoft:'#eae6eb',
+        grayHard:'#9e9e9e',
+        white: 'white'
     }
+
 }
 
 export default variables
